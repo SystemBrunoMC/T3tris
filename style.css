@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+body {
+    font-family: 'MiFuente', Arial, sans-serif;
+    color: white;
+}
+
+body {
+    background: url('fondo.png') no-repeat center center fixed;
+    background-size: cover; /* Ajusta para que cubra toda la pantalla */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+canvas {
+    border: 2px solid #fff;
+    background: #000;
+}
+@font-face {
+    font-family: 'MiFuente';
+    src: url('fonts/BTTF.ttf') format('truetype');
+}
+
+#mobileControls {
+    display: none; /* Solo se activará en móvil */
+}
+
+.btn-touch {
+    font-size: 22px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    backdrop-filter: blur(4px);
+    border: 2px solid white;
+}
+
+.btn-touch:active {
+    transform: scale(0.9);
+    background: rgba(255,255,255,0.4);
+}
+
+/* Mostrar botones en pantallas pequeñas */
+@media (max-width: 800px) {
+    #mobileControls {
+        display: flex;
+    }
+
+    body {
+        transform: scale(1.2);
+        transform-origin: top center;
+    }
+}
+
+#pcControls {
+    margin-top: 20px;
+    font-size: 25px;
+    color: rgb(255, 85, 0);
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Ocultar en móvil */
+@media (max-width: 800px) {
+    #pcControls {
+        display: none;
+    }
+}
+
+#mobileControls {
+    display: none;
+}
+
+/* Mostrar controles táctiles solo en pantallas pequeñas */
+@media (max-width: 800px) {
+    #mobileControls {
+        display: flex;
+    }
+}
